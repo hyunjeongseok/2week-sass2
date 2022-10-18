@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+
+    <style>
+        .gnb{
+            background: #ccc;
+        }
+        .gnb ul{
+            display: flex;
+            justify-content: center;
+        }
+        .gnb ul li{padding: 0 10px;
+        line-height: 50px;}
+    </style>
+
+    <nav class="gnb">
+        <ul>
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+        </ul>
+    </nav>
+
+    <style>
+        main{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .box1{
+            padding: 10px;
+            background: #ccc;
+            margin: 10px 0;
+        }
+        .box1 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom{
+            background: #fff;
+            padding: 10px;
+            display: flex;
+        }
+        .box1 .left{
+            /* background: #00f; */
+            flex-grow: 1;
+            margin-right: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .box1 .left li{
+            width: calc((100% - 20px) / 3);
+            height: 100px;
+            background: #f00;
+        }
+        .box1 .right{
+            width: 150px;
+            background: #f00;
+        }
+    </style>
+    
+    <main>
+        <div class="box1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <ul class="right">right</ul>
+            </div>
+        </div>
+    
+    <style>
+        .box2{
+            padding: 10px;
+            background: #ccc;
+            margin: 10px 0;
+        }
+        .box2 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box2 .bottom{
+            background: #fff;
+            padding: 10px;
+            display: flex;
+        }
+        .box2 .left{
+            /* background: #00f; */
+            flex-grow: 1;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,100px);
+            gap: 10px;
+        }
+        .box2 .left li{
+            background: #f00;
+        }
+
+        .box2 .right{
+            width: 150px;
+            background: #f00;
+        }
+    </style>
+
+        <div class="box2">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <ul class="right">right</ul>
+            </div>
+        </div>
+        <style>
+            .box3{
+                background: #ccc;
+                padding: 10px;
+            }
+            .box3 ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .box3 li a{
+                display: flex;
+                background: #000;
+                gap: 10px;
+            }
+            .box3 li a .boxs{
+                width: 150px; height: 150px;
+                background: #f00;
+            }
+            .box3 li a p{
+                background: #fff;
+                /* height: 150px; */
+                flex-grow: 1;
+                
+            }
+        </style>
+    
+        <div class="box3">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="boxs"></span>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="boxs"></span>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="boxs"></span>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="boxs"></span>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    
+
+</body>
+</html>

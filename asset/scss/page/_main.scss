@@ -1,0 +1,106 @@
+
+
+
+.box1{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    .slide{
+        flex: 1;
+        height: 300px;
+        background: #f00;
+        &.active{
+            position: relative;
+
+        }
+    }
+    .btn{
+        @include position('top');
+        &.prev{left: 10px;}
+        &.next{right: 10px;}
+    }
+}
+
+.box2{
+    height: 100px;
+    background: #f00;
+}
+
+.box3{
+    margin: 10px 0;
+    background: #ccc;
+    padding: 10px;
+    ul{
+        background: #fff;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: repeat(2,100px);
+        gap: 10px;
+    }
+    li{
+        background: #f00;
+        &:nth-child(1){
+            grid-column: span 7;
+        }
+        &:nth-child(2){
+            grid-column: span 3;
+        }
+        &:nth-child(3){
+            grid-column: span 2;
+        }
+        &:nth-child(4){
+            grid-column: span 8;
+        }
+    }
+}
+
+.box4{
+    display: flex;
+    padding: 10px;
+    background: #ccc;
+    justify-content: space-between;
+    align-items: center;
+    .nav-wrap{
+        display: flex;
+        a{
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            &.prev{margin-right: -1px;}
+        }
+    }
+}
+
+.box5{
+    margin: 10px 0;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    
+    }
+    li{ 
+        width: calc((100% - 30px) / 4);
+        padding: 10px;
+        background: #f00;
+        box-sizing: border-box;
+        a{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        img{}
+        strong{
+            background: #fff;
+
+           @include ellipse;
+        }
+        p{
+            background: #fff;
+            
+            @include ellipse(2,18px);
+        }
+    }
+
+}

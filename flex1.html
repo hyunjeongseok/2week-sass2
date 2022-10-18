@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+
+    <style>
+        body{
+            background: #ccc;
+        }
+
+        main{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .box2{
+            display: flex;
+            gap: 10px;
+        }
+        .box2 div{
+            flex: 1;
+            height: 200px;
+            background: #fff;
+        }
+    </style>
+
+    <main>
+        <div class="box1">box</div>
+        <h1>gap</h1>
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <style>
+            .box3{
+                display: flex;
+            }
+            .box3 div{
+                flex: 1;
+                height: 100px;
+                background: #fff;
+            }
+            .box3 > *+*{
+                margin-left: 10px;
+            }
+        </style>
+
+        <h1>올빼미</h1>
+        <div class="box3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>3</div>
+            <div>3</div>
+        </div>
+
+        <style>
+            .box4{
+                padding: 10px;
+                background: #f00;
+                display: flex;
+                justify-content: space-between;
+            }
+            .box4 div{
+                width: calc(50% - 5px);
+                height: 100px;
+                background: #fff;
+            }
+        </style>
+
+        <h1>스페이스 비트윈</h1>
+        <div class="box4">
+            <div>1</div>
+            <div>2</div>
+        </div>
+
+        <style>
+            .box5{
+                margin-top: 10px;
+                background: #f00;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .box5 div{
+                background: #fff;
+                height: 100px;
+                width: calc(80% - 5px);
+                
+            }
+            .box5 div:last-child{
+                background: #fff;
+                height: 100px;
+                width: calc(20% - 5px);
+                
+            }
+        </style>
+
+        <div class="box5">
+            <div>80%</div>
+            <div>20%</div>
+        </div>
+    </main>
+</body>
+</html>

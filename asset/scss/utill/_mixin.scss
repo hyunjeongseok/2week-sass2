@@ -1,0 +1,50 @@
+@mixin position($position) {
+
+    @if ($position == 'center') {
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if($position == 'top'){
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else if($position == 'left'){
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*
+    @$line -> 라인의수
+    $height -> 라인헤이트
+*/ 
+@mixin ellipse($line:1,$height:20px) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: $height;
+
+    @if($line > 1){
+        min-height: $line*$height;
+        display:-webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    
+
+    }
+    @else{
+        white-space: nowrap;
+      
+
+    }
+
+   
+
+            
+}
+
+

@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/*
+    @$line -> 라인의수
+    $height -> 라인헤이트
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  clear: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.inner {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header .top {
+  position: relative;
+  height: 200px;
+  background: #fae100;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .sns {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+header .login {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.gnb {
+  background: #f00;
+}
+.gnb ul {
+  display: flex;
+  justify-content: center;
+}
+
+.box1 {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.box1 .slide {
+  flex: 1;
+  height: 300px;
+  background: #f00;
+}
+.box1 .slide.active {
+  position: relative;
+}
+.box1 .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box1 .btn.prev {
+  left: 10px;
+}
+.box1 .btn.next {
+  right: 10px;
+}
+
+.box2 {
+  height: 100px;
+  background: #f00;
+}
+
+.box3 {
+  margin: 10px 0;
+  background: #ccc;
+  padding: 10px;
+}
+.box3 ul {
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+.box3 li {
+  background: #f00;
+}
+.box3 li:nth-child(1) {
+  grid-column: span 7;
+}
+.box3 li:nth-child(2) {
+  grid-column: span 3;
+}
+.box3 li:nth-child(3) {
+  grid-column: span 2;
+}
+.box3 li:nth-child(4) {
+  grid-column: span 8;
+}
+
+.box4 {
+  display: flex;
+  padding: 10px;
+  background: #ccc;
+  justify-content: space-between;
+  align-items: center;
+}
+.box4 .nav-wrap {
+  display: flex;
+}
+.box4 .nav-wrap a {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+}
+.box4 .nav-wrap a.prev {
+  margin-right: -1px;
+}
+
+.box5 {
+  margin: 10px 0;
+}
+.box5 ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box5 li {
+  width: calc((100% - 30px) / 4);
+  padding: 10px;
+  background: #f00;
+  box-sizing: border-box;
+}
+.box5 li a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box5 li strong {
+  background: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.box5 li p {
+  background: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  min-height: 36px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

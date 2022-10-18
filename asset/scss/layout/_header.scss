@@ -1,0 +1,28 @@
+header{
+    .top{
+        position: relative;
+        height: 200px;
+        background: $color1;
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        @include position('center');
+        a{}
+    }
+    .sns{
+        @include position('top');
+        left: 0;
+    }
+    .login{
+        @include position('top');
+        right: 0;
+    }
+}
+.gnb{
+    background: #f00;
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+}
